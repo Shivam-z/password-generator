@@ -16,7 +16,6 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import { useEffect, useState } from "react";
 import { generatePassword } from "./helper";
-import { debounce } from "lodash";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -110,7 +109,6 @@ function App() {
   };
 
   useEffect(() => {
-    // debounce(handleGeneratePassword, 1000)();
     handleGeneratePassword();
   }, [passwordLength, isChecked]);
   return (
